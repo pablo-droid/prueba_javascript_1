@@ -11,12 +11,15 @@ function separateAndUppercase(name) {
 
 //2
 // convert name to an array of words (words are separated by spaces)
+// filter empty words in case the user enters too many spaces
 // return the length of the array
 function getNameWordNumber(name) {
-    return name.split(' ').length;
+    console.log(name.split(' '));
+    return name.split(' ').filter((word)=>{return word !== "";}).length;
 }
 
 //console.log(getNameWordNumber("Antonio Alberto Jesus"));
+//console.log(getNameWordNumber("Antonio    Alberto     Jesus"));
 
 //3
 // uppercase the phrase
